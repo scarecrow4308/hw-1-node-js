@@ -1,20 +1,30 @@
 {
-  "name": "1-lesson",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "template",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index",
-    "start:dev": "nodemon index"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^2.0.20"
+    "start": "cross-env NODE_ENV=production node ./src/server.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon ./src/server.js",
+    "lint": "eslint **/*.js",
+    "lint:fix": "eslint --fix **/*.js"
   },
   "dependencies": {
-    "yargs": "^17.7.1"
+    "cors": "2.8.5",
+    "cross-env": "7.0.3",
+    "dotenv": "^16.0.3",
+    "express": "4.17.1",
+    "joi": "^17.8.3",
+    "mongodb": "^5.1.0",
+    "mongoose": "^7.0.2",
+    "morgan": "1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "7.19.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "16.0.3",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "5.2.0",
+    "nodemon": "2.0.15"
   }
 }
